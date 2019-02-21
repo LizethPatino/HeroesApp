@@ -1,4 +1,13 @@
 <h3>Heroes Encontrados: <small>{{ subtitulo }}</small></h3>
+<hr>
+
+<div class="animated fadeIn fast" *ngIf="heroes.length == 0">
+    <div clas="col-md-12">
+      <div class="alert alert-info" role="alert">
+          No existen Resultados con el término: {{ termino }}
+      </div>
+    </div>
+</div>
 
 <div class="card-columns mt-4">
   <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
